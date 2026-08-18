@@ -1,0 +1,50 @@
+.navbar
+{
+    background-color: var(--fg-color);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navbar .links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+.navbar .links a
+{
+    position: relative;
+    color: var(--secondary-font-color);
+    transition: color 300ms;
+    text-wrap: nowrap;
+}
+.navbar .links a::after
+{
+    content: "";
+    background-color: var(--accent-color);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 100vh;
+    border: none;
+    transform: scaleX(0);
+    transition: transform 150ms ease-out;
+}
+.navbar .links a:hover
+{
+    color: var(--accent-color);
+}
+.navbar .links a:hover::after
+{
+    transform: scaleX(1);
+}

@@ -1,0 +1,25 @@
+.logo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.logo svg
+{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.logo svg path
+{
+    stroke: var(--accent-color);
+}
+.logo .logotype
+{
+    font-family: 'Domine';
+    font-size: 1.15rem;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    align-self: center;
+    transform: translateY(9%);
+}

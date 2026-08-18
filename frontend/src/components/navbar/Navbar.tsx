@@ -7,10 +7,10 @@ interface NavbarProps {
     className?: string
 };
 
-export default function Navbar({children, className}: NavbarProps)
+export default function Navbar({children, className = ""}: NavbarProps)
 {
     return (
-        <header className={"navbar " + (className ?? "")}>
+        <header className={`navbar ${className}`}>
             <section>
                 <Logo />
             </section>

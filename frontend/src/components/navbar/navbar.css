@@ -1,10 +1,11 @@
 .navbar
 {
     background-color: var(--fg-color);
-    height: 60px;
+    height: var(--navbar-height);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: clamp(30px, calc(50vw - 300px), 500px);
     border-bottom: 1px solid rgb(189, 189, 189);
     position: fixed;
     top: 0;
@@ -47,4 +48,22 @@
 .navbar .links a:hover::after
 {
     transform: scaleX(1);
+}
+
+@media (max-width: 620px) {
+    .navbar
+    {
+        --navbar-height: 120px;
+    }
+    .navbar .links
+    {
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .navbar
+    {
+        flex-direction: column;
+        --navbar-height: 300px;
+    }
 }

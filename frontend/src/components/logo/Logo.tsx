@@ -1,4 +1,4 @@
-import HomeIcon from "../../assets/gift-icon.svg?react"
+import HomeIcon from "../../assets/icons/logo.svg?react"
 import { Link } from "react-router-dom"
 import "./logo.css"
 

@@ -36,6 +36,9 @@
     --fg-color: #FFFBF6;
     --primary-font-color: #2D2118;
     --secondary-font-color: #695a53;
+    
+    --navbar-height: 60px;
+    --corner-radius: 12px;
 }
 *
 {

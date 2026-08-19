@@ -2,7 +2,9 @@
 {
     opacity: 0;
     transform: translateY(20%) scale(0.5);
-    transition: all 600ms;
+    transition: transform 600ms, opacity 600ms;
+    width: fit-content;
+    height: fit-content;
 }
 .fade-in.visible
 {

@@ -1,41 +1,42 @@
 @font-face {
     font-family: 'Lato';
     src: url("./assets/fonts/Lato/Lato-Light.ttf");
-    font-weight: light;
+    font-weight: 200;
 }
 @font-face {
     font-family: 'Lato';
     src: url("./assets/fonts/Lato/Lato-Regular.ttf");
-    font-weight: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: 'Lato';
     src: url("./assets/fonts/Lato/Lato-Bold.ttf");
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @font-face {
     font-family: 'Domine';
     src: url("./assets/fonts/Domine/Domine-Regular.ttf");
-    font-weight: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: 'Domine';
     src: url("./assets/fonts/Domine/Domine-Medium.ttf");
-    font-weight: medium;
+    font-weight: 500;
 }
 @font-face {
     font-family: 'Domine';
     src: url("./assets/fonts/Domine/Domine-Bold.ttf");
-    font-weight: bold;
+    font-weight: 600;
 }
 :root
 {
     --accent-color: #B85C38;
-    --bg-color: #FAF7F2;
+    --bg-primary-color: #FAF7F2;
+    --bg-secodnary-color: #F6F1E9;
     --fg-color: #FFFBF6;
-    --primary-font-color: #2D2118;
-    --secondary-font-color: #695a53;
+    --font-primary-color: #2D2118;
+    --font-secondary-color: #695a53;
     
     --navbar-height: 60px;
     --corner-radius: 12px;
@@ -50,11 +51,21 @@
 {
     min-height: 1000dvh;
     font-family: 'Lato';
-    background-color: var(--bg-color);
+    background-color: var(--bg-primary-color);
     font-size: 16px;
 }
 a, a:visited, a:hover, a:active
 {
     color: unset;
     text-decoration: none;
+}
+blockquote::before
+{
+    content: "”";
+    margin-right: 1px;
+}
+blockquote::after
+{
+    content: "”";
+    margin-left: 1px;
 }

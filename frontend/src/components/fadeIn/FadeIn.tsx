@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, cloneElement, type ReactElement } from "react";
 import "./fadeIn.css";
 
 interface FadeInProps
 {
-    children: ReactNode
+    children: ReactElement<{className?: string}>,
 };
 
 export default function FadeIn({
-    children
+    children,
 }: FadeInProps)
 {
     const [visible, setVisible] = useState(false);
@@ -25,9 +25,12 @@ export default function FadeIn({
         return () => observer.disconnect();
     }, []);
 
-    return (
-        <div ref={ref} className={`fade-in ${visible ? "visible": ""}`}>
-            {children}
-        </div>
-    )
+    const childProps = {
+        ref,
+        className: `${children.props.className ?? ""} fade-in ${
+            visible ? "visible" : ""
+        }`
+    };
+
+    return cloneElement(children, childProps as any);
 }

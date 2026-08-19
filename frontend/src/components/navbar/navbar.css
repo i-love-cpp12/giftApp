@@ -1,3 +1,7 @@
+#root
+{
+    padding-top: var(--navbar-height);
+}
 .navbar
 {
     background-color: var(--fg-color);
@@ -11,6 +15,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
 }
 .navbar .links
 {
@@ -22,7 +27,7 @@
 .navbar .links a
 {
     position: relative;
-    color: var(--secondary-font-color);
+    color: var(--font-secondary-color);
     transition: color 300ms;
     text-wrap: nowrap;
 }
@@ -51,9 +56,15 @@
 }
 
 @media (max-width: 620px) {
+    #root
+    {
+        padding-top: 0;
+    }
     .navbar
     {
-        --navbar-height: 120px;
+        position: static;
+        height: auto;
+        padding-block: 20px;
     }
     .navbar .links
     {
@@ -64,6 +75,5 @@
     .navbar
     {
         flex-direction: column;
-        --navbar-height: 300px;
     }
 }

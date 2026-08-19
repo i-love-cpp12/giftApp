@@ -1,0 +1,148 @@
+.home-title-section
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 10%;
+}
+.home-title-section div.left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.home-title-section .title-section-label
+{
+    background-color: #EDD9BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 8px;
+    border-radius: 100vh;
+    border: none;
+    font-size: clamp(0.7rem, 2vw, 0.95rem);
+    text-wrap: nowrap;
+}
+.home-title-section .title-section-label svg
+{
+    fill: var(--accent-color);
+    height: clamp(15px, 2vw, 22px);
+    width: clamp(15px, 2vw, 22px);
+}
+
+.home-title-section .left .title
+{
+    font-size: clamp(1.1rem, 4vw, 2.5rem);
+    font-family: 'Donim';
+}
+
+.home-title-section .left p
+{
+    color: var(--font-secondary-color);
+    font-size: clamp(0.7rem, 2vw, 1.05rem);
+    line-height: clamp(1.2rem, 5vw, 1.7rem);
+    letter-spacing: 1px;
+    width: 70%;
+}
+.home-title-section .left .order-container
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.home-title-section .left .order-container button
+{
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+}
+.home-title-section .left .order-container > span
+{
+    color: var(--font-secondary-color);
+    font-size: 0.8rem;
+}
+.home-title-section .right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-title-section .right .example-rating .user-rating
+{
+    position: relative;
+    font-size: clamp(0.73rem, 2vw, 1rem);
+    padding: clamp(7px, 5vw, 15px);
+    width: clamp(220px, 23vw, 280px);
+}
+
+.home-title-section .right .example-rating:first-child .user-rating
+{
+    left: clamp(0px, 5vw, 130px);
+    transform: rotate(-5deg);
+}
+.home-title-section .right .example-rating:last-child .user-rating
+{
+    bottom: clamp(0px, 3vw, 30px);
+    right: clamp(0px, 5vw, 130px);
+    transform: rotate(15deg);
+}
+.home-title-section .right .satisfied-user-count
+{
+    background-color: var(--accent-color);
+    color: var(--fg-color);
+    padding: 20px;
+    border-radius: var(--corner-radius);
+    width: 170px;
+    font-size: 0.9rem;
+    font-weight: 200;
+    transform: rotate(3deg);
+    z-index: 50;
+}
+.home-title-section .right .satisfied-user-count .icon
+{
+    margin-bottom: 15px;
+}
+.home-title-section .right .satisfied-user-count svg path
+{
+    stroke: var(--fg-color);
+}
+.home-title-section .right .satisfied-user-count .count
+{
+    font-family: "Donim";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1320px)
+{
+    .home-title-section
+    {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+@media (max-width: 620px)
+{
+    .home-title-section
+    {
+        padding-inline: clamp(10px, 2vw, 25px);
+        padding-block: clamp(20px, 10vw, 50px);
+    }
+    .home-title-section .left, .home-title-section .right
+    {
+        align-items: center;
+    }
+    .home-title-section .left
+    {
+        text-align: center;
+    }
+    .home-title-section .left .order-container
+    {
+        flex-direction: column;
+        gap: 7px;
+    }
+    .home-title-section .left .order-container > span
+    {
+        font-size: 0.7rem;
+    }
+}

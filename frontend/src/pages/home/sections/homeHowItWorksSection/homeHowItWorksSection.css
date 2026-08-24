@@ -1,0 +1,122 @@
+.home-how-it-works-section
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    font-size: clamp(0.75rem, 1vw, 1rem);
+}
+.home-how-it-works-section .title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.home-how-it-works-section .title h2
+{
+    font-size: 2.5em;
+}
+
+.home-how-it-works-section .title div
+{
+    color: var(--font-secondary-color);
+}
+
+.home-how-it-works-section .steps-tiles-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.home-how-it-works-section .step-tile
+{
+    border-radius: var(--corner-radius);
+    border: 1px solid rgba(0, 0, 0, 0.152);
+    padding: 2em;
+    position: relative;
+    background-color: var(--fg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    /* font-size: 0.9em; */
+    height: 100%;
+    width: 100%;
+}
+.home-how-it-works-section .step-tile::after
+{
+    content: "";
+    background-color: var(--accent-color);
+    color: var(--fg-color);
+    border-radius: 100vh;
+    border: none;
+    padding: 5px 12px;
+    position: absolute;
+    top: 0;
+    left: 3%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+}
+.home-how-it-works-section .step-tile:nth-child(1)::after
+{
+    content: "01";
+}
+.home-how-it-works-section .step-tile:nth-child(2)::after
+{
+    content: "02";
+}
+.home-how-it-works-section .step-tile:nth-child(3)::after
+{
+    content: "03";
+}
+
+.home-how-it-works-section .step-tile .icon
+{
+    width: 3em;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secodnary-color);
+    border-radius: var(--corner-radius);
+}
+.home-how-it-works-section .step-tile .icon svg
+{
+    width: 1.8em;
+    height: 1.8em;
+    fill: var(--accent-color);
+}
+/* present icon */
+.home-how-it-works-section .step-tile .present-icon svg
+{
+    fill: transparent;
+}
+.home-how-it-works-section .step-tile .present-icon svg path
+{
+    stroke: var(--accent-color);
+}
+
+.home-how-it-works-section .step-tile h3
+{
+    font-size: 1.55em;
+    text-wrap: nowrap;
+}
+.home-how-it-works-section .step-tile .note
+{
+    background-color: var(--bg-secodnary-color);
+    color: var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 100vh;
+    border: none;
+    width: fit-content;
+}
+@media (max-width: 1330px)
+{
+    .home-how-it-works-section .steps-tiles-container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

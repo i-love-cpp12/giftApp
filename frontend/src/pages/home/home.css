@@ -1,0 +1,29 @@
+#root
+{
+    overflow: hidden;
+}
+
+main
+{
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    height: 100dvh;
+}
+
+main > section
+{
+    min-height: 100dvh;
+    padding: 100px 10%;
+}
+main > section:nth-of-type(even)
+{
+    background-color: var(--bg-secodnary-color);
+}
+@media (max-width: 620px)
+{
+    .home-title-section
+    {
+        padding-inline: clamp(10px, 2vw, 25px);
+        padding-block: clamp(20px, 10vw, 50px);
+    }
+}

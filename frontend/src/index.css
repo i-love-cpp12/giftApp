@@ -49,10 +49,13 @@
 }
 #root
 {
-    min-height: 1000dvh;
     font-family: 'Lato';
     background-color: var(--bg-primary-color);
     font-size: 16px;
+}
+body
+{
+    overflow: hidden;
 }
 a, a:visited, a:hover, a:active
 {
@@ -68,4 +71,15 @@ blockquote::after
 {
     content: "”";
     margin-left: 1px;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Domine";
+}
+p.description
+{
+    color: var(--font-secondary-color);
+    font-size: 1.05em;
+    line-height: 1.7em;
+    letter-spacing: 1px;
 }

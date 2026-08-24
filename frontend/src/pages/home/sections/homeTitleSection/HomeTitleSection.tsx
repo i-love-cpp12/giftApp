@@ -6,10 +6,15 @@ import UserRating from "../../../../components/userRating/UserRating";
 import FadeIn from "../../../../components/fadeIn/FadeIn";
 import "./homeTitleSection.css";
 
-export default function HomeTitleSection()
+interface HomeTitleSectionProps
+{
+    id ?: string
+}
+
+export default function HomeTitleSection(props: HomeTitleSectionProps)
 {
     return(
-        <section className="home-title-section">
+        <section className="home-title-section" {...props}>
             <div className="left">
                 <FadeIn>
                     <div className="title-section-label">
@@ -27,7 +32,7 @@ export default function HomeTitleSection()
                 </FadeIn>
 
                 <FadeIn>
-                    <p>
+                    <p className="description">
                         Opisz osobę, która checsz obdarować &mdash; nasz ekspert przygotuje spersonalizowany pomysł dopasowany do jej charakteru, zainteresowań i okazji.
                     </p>
                 </FadeIn>
@@ -60,7 +65,7 @@ export default function HomeTitleSection()
                             <div className="icon">
                                 <PresentIcon />
                             </div>
-                            <div className="count">277</div>
+                            <h3 className="count">277</h3>
                             <p>zadowolonych</p>
                             <p>klientów</p>
                         </div>
@@ -80,5 +85,5 @@ export default function HomeTitleSection()
             </div>
 
         </section>
-    )
+    );
 }

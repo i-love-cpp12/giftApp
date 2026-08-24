@@ -2,13 +2,14 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 100px 10%;
+    place-items: center;
+    font-size: clamp(0.7rem, 1vw, 1rem);
 }
 .home-title-section div.left
 {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5em;
 }
 
 .home-title-section .title-section-label
@@ -21,7 +22,7 @@
     padding: 6px 8px;
     border-radius: 100vh;
     border: none;
-    font-size: clamp(0.7rem, 2vw, 0.95rem);
+    font-size: 0.95em;
     text-wrap: nowrap;
 }
 .home-title-section .title-section-label svg
@@ -33,16 +34,11 @@
 
 .home-title-section .left .title
 {
-    font-size: clamp(1.1rem, 4vw, 2.5rem);
-    font-family: 'Donim';
+    font-size: clamp(0.85rem, 4vw, 2.5rem);
 }
 
 .home-title-section .left p
 {
-    color: var(--font-secondary-color);
-    font-size: clamp(0.7rem, 2vw, 1.05rem);
-    line-height: clamp(1.2rem, 5vw, 1.7rem);
-    letter-spacing: 1px;
     width: 70%;
 }
 .home-title-section .left .order-container
@@ -53,7 +49,7 @@
 }
 .home-title-section .left .order-container button
 {
-    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    font-size: 0.95em;
 }
 .home-title-section .left .order-container > span
 {
@@ -108,7 +104,6 @@
 }
 .home-title-section .right .satisfied-user-count .count
 {
-    font-family: "Donim";
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -123,11 +118,6 @@
 }
 @media (max-width: 620px)
 {
-    .home-title-section
-    {
-        padding-inline: clamp(10px, 2vw, 25px);
-        padding-block: clamp(20px, 10vw, 50px);
-    }
     .home-title-section .left, .home-title-section .right
     {
         align-items: center;

@@ -34,11 +34,11 @@
 }
 .home-how-it-works-section .step-tile
 {
-    border-radius: var(--corner-radius);
-    border: 1px solid rgba(0, 0, 0, 0.152);
-    padding: 2em;
+    /* border-radius: var(--corner-radius); */
+    /* border: 1px solid rgba(0, 0, 0, 0.152); */
+    /* padding: 2em; */
     position: relative;
-    background-color: var(--fg-color);
+    /* background-color: var(--fg-color); */
     display: flex;
     flex-direction: column;
     gap: 1.2em;

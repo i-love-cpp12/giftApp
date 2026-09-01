@@ -21,7 +21,7 @@ export default function HomeHowItWorksSection(props: HomeTitleSectionProps)
             </FadeIn>
             <div className="steps-tiles-container">
                 <FadeIn>
-                    <div className="step-tile">
+                    <div className="step-tile tile">
                         <div className="icon">
                             <WritingPenIcon />
                         </div>
@@ -33,7 +33,7 @@ export default function HomeHowItWorksSection(props: HomeTitleSectionProps)
                     </div>
                 </FadeIn>
                 <FadeIn>
-                    <div className="step-tile">
+                    <div className="step-tile tile">
                         <div className="icon">
                             <SparkleIcon />
                         </div>
@@ -45,7 +45,7 @@ export default function HomeHowItWorksSection(props: HomeTitleSectionProps)
                     </div>
                 </FadeIn>
                 <FadeIn>
-                    <div className="step-tile">
+                    <div className="step-tile tile">
                         <div className="icon present-icon">
                             <PresentIcon />
                         </div>

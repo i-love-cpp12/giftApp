@@ -7,9 +7,9 @@
     padding: 15px;
     padding-right: 30px;
     width: 280px;
-    background-color: var(--fg-color);
-    border-radius: var(--corner-radius);
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.169);
+    /* background-color: var(--fg-color); */
+    /* border-radius: var(--corner-radius); */
+    /* box-shadow: 0 0 7px rgba(0, 0, 0, 0.169); */
     font-size: 1rem;
 }
 .user-rating .stars

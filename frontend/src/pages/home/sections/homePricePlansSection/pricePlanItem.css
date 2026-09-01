@@ -1,0 +1,21 @@
+.price-plan-item
+{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 0.4em;
+    color: var(--font-primary-color);
+}
+.price-plan-item svg
+{
+    fill: var(--accent-color);
+}
+
+.price-plan-item.fliped-colors
+{
+    color: var(--fg-color);
+}
+.price-plan-item.fliped-colors svg
+{
+    fill: var(--fg-color);;
+}

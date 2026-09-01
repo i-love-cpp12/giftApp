@@ -83,3 +83,11 @@ p.description
     line-height: 1.7em;
     letter-spacing: 1px;
 }
+div.tile
+{
+    background-color: var(--fg-color);
+    padding: 2em;
+    border-radius: var(--corner-radius);
+    border: 1px solid rgba(0, 0, 0, 0.064);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.022);
+}

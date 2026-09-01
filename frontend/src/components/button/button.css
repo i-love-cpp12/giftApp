@@ -36,7 +36,30 @@
 {
     fill: var(--accent-color);
 }
-.button.button--secondary
+/* .button.button--secondary
 {
     background-color: var(--secondary-color);
+} */
+ .button.button--secondary
+{
+    color: var(--accent-color);
+    background-color: var(--fg-color);
+    /* border: 1px solid rgba(0, 0, 0, 0.12); */
+    opacity: 0.95;
 }
+.button.button--secondary:hover
+{
+    /* color: var(--fg-color);
+    background-color: var(--accent-color); */
+
+    transform: scale(1.05);
+    opacity: 1;
+}
+/* .button.button--secondary svg
+{
+    fill: var(--accent-color);
+}
+.button.button--secondary:hover svg
+{
+    fill: var(--fg-color);
+} */

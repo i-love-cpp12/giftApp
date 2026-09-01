@@ -29,7 +29,7 @@ export default function UserRating({
     });
 
     return (
-        <div className="user-rating">
+        <div className="user-rating tile">
             <div className="stars">
                 {starsIcons}
             </div>

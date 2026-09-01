@@ -1,6 +1,7 @@
 import HomeNavbar from "../../components/navbar/homeNavbar/HomeNavbar";
 import HomeTitleSection from "./sections/homeTitleSection/HomeTitleSection";
 import HomeHowItWorksSection from "./sections/homeHowItWorksSection/HomeHowItWorksSection";
+import HomePricePlansSection from "./sections/homePricePlansSection/HomePricePlansSection";
 import "./home.css";
 export default function Home()
 {
@@ -9,8 +10,7 @@ export default function Home()
             <HomeNavbar />
             <HomeTitleSection />
             <HomeHowItWorksSection id="how-it-works"/>
-            <HomeTitleSection id="price-plans"/>
-            <HomeTitleSection id="opinions"/>
+            <HomePricePlansSection id="price-plans"/>
         </main>
     );
 }

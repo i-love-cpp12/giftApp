@@ -17,12 +17,13 @@
 }
 .home-how-it-works-section .title h2
 {
-    font-size: 2.5em;
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
 }
 
 .home-how-it-works-section .title div
 {
     color: var(--font-secondary-color);
+    font-size: 1.1em;
 }
 
 .home-how-it-works-section .steps-tiles-container
@@ -41,7 +42,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2em;
-    /* font-size: 0.9em; */
+    /* font-size: 1.1em; */
     height: 100%;
     width: 100%;
 }
@@ -100,8 +101,12 @@
 
 .home-how-it-works-section .step-tile h3
 {
-    font-size: 1.55em;
+    font-size: 1.53em;
     text-wrap: nowrap;
+}
+.home-how-it-works-section .step-tile p
+{
+    font-size: 1em;
 }
 .home-how-it-works-section .step-tile .note
 {

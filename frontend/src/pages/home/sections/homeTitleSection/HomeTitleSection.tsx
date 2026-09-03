@@ -4,14 +4,13 @@ import PresentIcon from "../../../../assets/icons/logo.svg?react";
 import Button from "../../../../components/button/Button";
 import UserRating from "../../../../components/userRating/UserRating";
 import FadeIn from "../../../../components/fadeIn/FadeIn";
+import { Link } from "react-router-dom";
+import type { HomeSectionProps } from "../../Home";
 import "./homeTitleSection.css";
 
-interface HomeTitleSectionProps
-{
-    id ?: string
-}
 
-export default function HomeTitleSection(props: HomeTitleSectionProps)
+
+export default function HomeTitleSection(props: HomeSectionProps)
 {
     return(
         <section className="home-title-section" {...props}>
@@ -39,10 +38,12 @@ export default function HomeTitleSection(props: HomeTitleSectionProps)
 
                 <FadeIn>
                     <div className="order-container">
-                        <Button variant="primary">
-                            <span>Zamów pomysł na prezent</span>
-                            <ArrowRightIcon />
-                        </Button>
+                        <Link to="order">
+                            <Button variant="primary">
+                                <span>Zamów pomysł na prezent</span>
+                                <ArrowRightIcon />
+                            </Button>
+                        </Link>
                         <span>od 14,99 zł &middot; odpowiedź w 12-24h</span>
                     </div>
                 </FadeIn>

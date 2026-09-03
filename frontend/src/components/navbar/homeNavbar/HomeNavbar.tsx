@@ -1,5 +1,6 @@
 import Navbar from "../Navbar";
 import Button from "../../button/Button";
+import { Link } from "react-router-dom";
 import LightbulbIcon from "../../../assets/icons/lightbulb.svg?react";
 
 export default function HomeNavbar()
@@ -12,10 +13,12 @@ export default function HomeNavbar()
                 <a href="#opinions">Opinie</a>
             </nav>
             <section className="order-btn">
-                <Button>
-                    <span>Zamów pomysł</span>
-                    <LightbulbIcon />
-                </Button>
+                <Link to="order">
+                    <Button>
+                        <span>Zamów pomysł</span>
+                        <LightbulbIcon />
+                    </Button>
+                </Link>
             </section>
         </Navbar>
     );

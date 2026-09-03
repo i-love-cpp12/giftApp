@@ -57,7 +57,7 @@
     transform: translateY(-50%);
     font-weight: 600;
     font-size: 0.9em;
-    background-color: rgb(255, 231, 198);
+    background-color: var(--sublime-color);
     color: var(--font-primary-color);
 }
 .home-price-plans-section .plan-tile.premium svg
@@ -105,11 +105,14 @@
     gap: 0;
     font-size: 0.9em;
 }
+.home-price-plans-section .plan-tile a
+{
+    margin-top: auto;
+}
 .home-price-plans-section .plan-tile .button
 {
     width: 100%;
     height: 40px;
-    margin-top: auto;
 }
 @media (max-width: 1000px)
 {

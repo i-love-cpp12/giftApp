@@ -12,18 +12,11 @@ main
 
 main > section
 {
-    min-height: 100dvh;
+    min-height: calc(100dvh - var(--navbar-height));
     padding: 100px 10%;
+    scroll-margin-top: var(--navbar-height);
 }
 main > section:nth-of-type(even)
 {
     background-color: var(--bg-secodnary-color);
-}
-@media (max-width: 620px)
-{
-    .home-title-section
-    {
-        padding-inline: clamp(10px, 2vw, 25px);
-        padding-block: clamp(20px, 10vw, 50px);
-    }
 }

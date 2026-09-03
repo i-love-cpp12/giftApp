@@ -1,13 +1,11 @@
 import UserRating from "../../../../components/userRating/UserRating";
 import FadeIn from "../../../../components/fadeIn/FadeIn";
+import type { HomeSectionProps } from "../../Home";
 import "./homeUserRatingSection.css";
 
-interface HomePricePlansSectionProps
-{
-    id ?: string
-}
 
-export default function HomeUserRatingSection(props: HomePricePlansSectionProps)
+
+export default function HomeUserRatingSection(props: HomeSectionProps)
 {
     return(
         <section className="home-user-rating-section" {...props}>

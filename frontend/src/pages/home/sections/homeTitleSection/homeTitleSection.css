@@ -14,7 +14,7 @@
 
 .home-title-section .title-section-label
 {
-    background-color: #EDD9BE;
+    background-color: var(--sublime-color);
     display: flex;
     justify-content: center;
     align-items: center;

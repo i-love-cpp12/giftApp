@@ -1,0 +1,39 @@
+.home-summary-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    min-height: 90dvh;
+    text-align: center;
+}
+.home-summary-section .logo
+{
+    background-color: var(--sublime-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 4em;
+    border-radius: 100dvh;
+}
+.home-summary-section .logo svg
+{
+    height: 2em;
+    width: 2em;
+}
+.home-summary-section h2
+{
+    font-size: 2.5em;
+}
+.home-summary-section .description
+{
+    color: var(--font-secondary-color);
+}
+.home-summary-section .button
+{
+    padding: 0.8em 4em;
+    font-size: 1em;
+}

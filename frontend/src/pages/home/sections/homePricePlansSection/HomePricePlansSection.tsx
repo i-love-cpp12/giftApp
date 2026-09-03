@@ -1,14 +1,13 @@
 import FadeIn from "../../../../components/fadeIn/FadeIn";
 import PricePlanItem from "./PricePlanItem";
 import Button from "../../../../components/button/Button";
+import { Link } from "react-router-dom";
+import type { HomeSectionProps } from "../../Home";
 import "./homePricePlansSection.css";
 
-interface HomePricePlansSectionProps
-{
-    id ?: string
-}
 
-export default function HomePricePlansSection(props: HomePricePlansSectionProps)
+
+export default function HomePricePlansSection(props: HomeSectionProps)
 {
     return(
         <section className="home-price-plans-section" {...props}>
@@ -34,7 +33,9 @@ export default function HomePricePlansSection(props: HomePricePlansSectionProps)
                             <PricePlanItem planItemContent="Opis i uzasadnienie wyboru"/>
                             <PricePlanItem planItemContent="Odpowiedź w 24 godziny"/>
                         </div>
-                        <Button variant="primary">Zamów Basic</Button>
+                        <Link to="/order?plan=basic">
+                            <Button variant="primary">Zamów Basic</Button>
+                        </Link>
                     </div>
                 </FadeIn>
                 <FadeIn>
@@ -69,7 +70,9 @@ export default function HomePricePlansSection(props: HomePricePlansSectionProps)
                                 flipedColors={true}
                             />
                         </div>
-                        <Button variant="secondary">Zamów Premium</Button>
+                        <Link to="/order?plan=premium">
+                            <Button variant="secondary">Zamów Premium</Button>
+                        </Link>
                     </div>
                 </FadeIn>
                 <FadeIn>
@@ -89,7 +92,9 @@ export default function HomePricePlansSection(props: HomePricePlansSectionProps)
                             <PricePlanItem planItemContent="Wysyłka bezpośrednio do odbiorcy"/>
                             <PricePlanItem planItemContent="Ręcznie pisana kartka"/>
                         </div>
-                        <Button variant="primary">Zapytaj o wycenę</Button>
+                        <Link to="/order?plan=custom">
+                            <Button variant="primary">Zapytaj o wycenę</Button>
+                        </Link>
                     </div>
                 </FadeIn>
             </div>

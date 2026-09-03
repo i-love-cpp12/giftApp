@@ -1,0 +1,27 @@
+.home-footer
+{
+    background-color: var(--fg-color);
+    min-height: 10dvh;
+    border-top: 1px solid rgb(189, 189, 189);
+    /* border: 5px solid rgb(189, 189, 189); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    color: var(--font-secondary-color);
+    text-align: center;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+.home-footer .logo
+{
+    color: var(--font-primary-color);
+    text-wrap: nowrap;
+}
+@media (max-width: 900px)
+{
+    .home-footer
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

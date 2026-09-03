@@ -2,14 +2,11 @@ import WritingPenIcon from "../../../../assets/icons/writing_pen.svg?react";
 import SparkleIcon from "../../../../assets/icons/sparkles.svg?react";
 import PresentIcon from "../../../../assets/icons/logo.svg?react";
 import FadeIn from "../../../../components/fadeIn/FadeIn";
+import type { HomeSectionProps } from "../../Home";
 import "./homeHowItWorksSection.css";
 
-interface HomeTitleSectionProps
-{
-    id ?: string
-}
 
-export default function HomeHowItWorksSection(props: HomeTitleSectionProps)
+export default function HomeHowItWorksSection(props: HomeSectionProps)
 {
     return(
         <section className="home-how-it-works-section" {...props}>

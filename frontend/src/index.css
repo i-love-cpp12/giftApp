@@ -83,7 +83,7 @@ p.description
     line-height: 1.7em;
     letter-spacing: 1px;
 }
-div.tile
+.tile
 {
     background-color: var(--fg-color);
     padding: 2em;

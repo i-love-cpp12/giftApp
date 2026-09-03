@@ -1,0 +1,42 @@
+.home-user-rating-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+.home-user-rating-section h2
+{
+    font-size: 2.2em;
+    text-align: center;
+    text-wrap: nowrap;
+}
+.home-user-rating-section .ratings
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
+    place-items: center;
+}
+.home-user-rating-section .ratings .user-rating
+{
+    line-height: 1.5em;
+    font-size: 1.15em;
+    padding-inline: 25px;
+    width: 20em;
+}
+@media (max-width: 1000px)
+{
+    .home-user-rating-section
+    {
+        font-size: clamp(0.75rem, 1.7vw, 1rem);
+        /* gap: 40px; */
+    }
+    .home-user-rating-section .ratings
+    {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

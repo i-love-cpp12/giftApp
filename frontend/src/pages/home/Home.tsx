@@ -14,15 +14,21 @@ export interface HomeSectionProps
 
 export default function Home()
 {
+    window.history.replaceState(
+        null, "", "/home"
+    );
+    
     return (
-        <main>
+        <>
             <HomeNavbar />
-            <HomeTitleSection />
-            <HomeHowItWorksSection id="how-it-works"/>
-            <HomePricePlansSection id="price-plans"/>
-            <HomeUserRatingSection id="opinions"/>
-            <HomeSummarySection />
-            <HomeFooter/>
-        </main>
+            <main>
+                <HomeTitleSection />
+                <HomeHowItWorksSection id="how-it-works"/>
+                <HomePricePlansSection id="price-plans"/>
+                <HomeUserRatingSection id="opinions"/>
+                <HomeSummarySection />
+                <HomeFooter/>
+            </main>
+        </>
     );
 }

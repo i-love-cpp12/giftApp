@@ -13,7 +13,7 @@ export default function HomeNavbar()
                 <a href="#opinions">Opinie</a>
             </nav>
             <section className="order-btn">
-                <Link to="order">
+                <Link to="/order">
                     <Button>
                         <span>Zamów pomysł</span>
                         <LightbulbIcon />

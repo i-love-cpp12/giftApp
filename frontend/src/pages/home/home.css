@@ -1,22 +1,10 @@
-#root
-{
-    overflow: hidden;
-}
-
-main
-{
-    scroll-behavior: smooth;
-    overflow-y: auto;
-    height: 100dvh;
-}
-
-main > section
+.home main section
 {
     min-height: calc(100dvh - var(--navbar-height));
     padding: 100px 10%;
     scroll-margin-top: var(--navbar-height);
 }
-main > section:nth-of-type(even)
+.home main section:nth-of-type(even)
 {
     background-color: var(--bg-secodnary-color);
 }

@@ -92,3 +92,15 @@ p.description
     border: 1px solid rgba(0, 0, 0, 0.064);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.022);
 }
+
+#root
+{
+    overflow: hidden;
+}
+
+.page main
+{
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    height: 100dvh;
+}

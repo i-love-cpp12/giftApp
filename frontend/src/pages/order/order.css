@@ -1,0 +1,10 @@
+.order main
+{
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    padding: 70px 10%;
+}
+.order main .order-steps
+{
+    width: 100%;
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+}

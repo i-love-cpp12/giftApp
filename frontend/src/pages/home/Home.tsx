@@ -17,18 +17,18 @@ export default function Home()
     window.history.replaceState(
         null, "", "/home"
     );
-    
+
     return (
-        <>
+        <div className="home page">
             <HomeNavbar />
             <main>
-                <HomeTitleSection />
+                <HomeTitleSection/>
                 <HomeHowItWorksSection id="how-it-works"/>
                 <HomePricePlansSection id="price-plans"/>
                 <HomeUserRatingSection id="opinions"/>
                 <HomeSummarySection />
                 <HomeFooter/>
             </main>
-        </>
+        </div>
     );
 }

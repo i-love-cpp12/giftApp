@@ -19,7 +19,7 @@ export default function Order()
     const [step, setStep] = useState(2);
 
     return (
-        <div className="order page">
+        <div className="order">
             <OrderNavbar step={step} totalSteps={4} />
             <main>
                 <FadeIn>

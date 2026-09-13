@@ -48,15 +48,20 @@
     margin: 0;
     padding: 0;    
 }
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    height: 100dvh;
+    scroll-behavior: smooth;
+}
 #root
 {
     font-family: 'Lato';
     background-color: var(--bg-primary-color);
     font-size: 16px;
-}
-body
-{
-    overflow: hidden;
 }
 a, a:visited, a:hover, a:active
 {
@@ -93,14 +98,4 @@ p.description
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.022);
 }
 
-#root
-{
-    overflow: hidden;
-}
 
-.page main
-{
-    scroll-behavior: smooth;
-    overflow-y: auto;
-    height: 100dvh;
-}

@@ -56,6 +56,10 @@
 }
 
 @media (max-width: 620px) {
+    :root
+    {
+        --navbar-height: 0;
+    }
     #root
     {
         padding-top: 0;

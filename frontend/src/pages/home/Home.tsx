@@ -19,7 +19,7 @@ export default function Home()
     );
 
     return (
-        <div className="home page">
+        <div className="home">
             <HomeNavbar />
             <main>
                 <HomeTitleSection/>

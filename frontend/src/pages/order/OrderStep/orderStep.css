@@ -1,0 +1,65 @@
+.order-step
+{
+    padding: 2.7em;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em
+}
+.order-step .title h1
+{
+    font-size: 1.6em;
+}
+
+.order-step nav
+{
+    display: flex;
+}
+.order-step nav .button
+{
+    font-size: 0.9em;
+}
+.order-step nav .next
+{
+    margin-left: auto;
+}
+.order-step nav .next .present-icon
+{
+    fill: transparent
+}
+
+.order-step nav .next .present-icon path
+{
+    stroke: var(--fg-color);
+}
+.order-step nav .next:hover .present-icon path
+{
+    stroke: var(--accent-color);
+}
+
+@media (max-width: 480px)
+{
+    .order-step h1, .order-step .description
+    {
+        text-align: center;
+    }
+    
+}
+@media (max-width: 330px)
+{
+    .order-step nav
+    {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .order-step nav div.prev, .order-step nav div.next
+    {
+        width: 100%;
+        margin: 0;
+    }
+    .order-step nav .button
+    {
+        width: 100%;
+        gap: 0px;
+    }
+}

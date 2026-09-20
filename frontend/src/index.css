@@ -29,6 +29,7 @@
     src: url("./assets/fonts/Domine/Domine-Bold.ttf");
     font-weight: 600;
 }
+
 :root
 {
     --accent-color: #B85C38;
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6
 p.description
 {
     color: var(--font-secondary-color);
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.7em;
     letter-spacing: 1px;
 }

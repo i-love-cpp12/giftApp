@@ -12,7 +12,15 @@
     gap: 3%;
     text-wrap: nowrap;
 }
+.button:active
+{
+    transform: scale(0.95) !important;
+}
 .button svg
+{
+    transition: all 200ms;
+}
+.button svg path
 {
     transition: all 200ms;
 }
@@ -44,7 +52,7 @@
 {
     color: var(--accent-color);
     background-color: var(--fg-color);
-    /* border: 1px solid rgba(0, 0, 0, 0.12); */
+    border: 1px solid var(--accent-color);
     opacity: 0.95;
 }
 .button.button--secondary:hover
@@ -55,11 +63,11 @@
     transform: scale(1.05);
     opacity: 1;
 }
-/* .button.button--secondary svg
+.button.button--secondary svg
 {
     fill: var(--accent-color);
 }
-.button.button--secondary:hover svg
+/* .button.button--secondary:hover svg
 {
     fill: var(--fg-color);
 } */

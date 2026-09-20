@@ -1,3 +1,6 @@
+import { Fragment } from "react/jsx-runtime";
+import TickIcon from "../../assets/icons/check.svg?react";
+
 import "./steps.css";
 
 
@@ -17,24 +20,20 @@ export default function Steps({
         <div className={`steps ${className}`}>
             <div className="step-tiles">
                 {
-                    steps.map((_, i) =>
-                        (
-                            <>
-                                <StepTile number={i + 1} active={i + 1 <= step} key={i * 2}/>
-                                {
-                                    i < steps.length - 1 ?
-                                        (
-                                            <div
-                                                className={`line ${i + 2 <= step ? "active" : ""}`}
-                                                key={i * 2 + 1}
-                                            ></div>
-                                        )
-                                        :
-                                        null
+                    steps.map((_, i) => {
+                        let phase: "current" | "done" | "not-active"  = "not-active";
+                        if(i + 1 == step) phase = "current";
+                        else if(i + 1 < step) phase = "done";
+
+                        return (
+                            <Fragment key={i}>
+                                <StepTile number={i + 1} phase={phase}/>
+                                {i < steps.length - 1 &&
+                                    (<div className={`line ${i + 2 <= step ? "active" : ""}`}></div>)
                                 }
-                            </>
-                        )
-                    )
+                            </Fragment>
+                        );
+                    })
                 }
             </div>
             <div className="step-names">
@@ -49,15 +48,17 @@ export default function Steps({
 
 interface StepTileProps {
     number: number,
-    active: boolean
+    phase: "done" | "current" | "not-active",
 }
 function StepTile({
     number,
-    active
+    phase = "not-active"
 }: StepTileProps)
 {
     return (
-        <div className={`step-tile ${active ? "active" : ""}`}>{number}</div>
+        <div className={`step-tile ${phase != "not-active" ? "active" : ""}`}>
+            {phase == "done" ? (<TickIcon />) : number}
+        </div>
     )
 }
 

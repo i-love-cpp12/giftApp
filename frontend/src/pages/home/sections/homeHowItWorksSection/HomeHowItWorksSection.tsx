@@ -13,7 +13,7 @@ export default function HomeHowItWorksSection(props: HomeSectionProps)
             <FadeIn>
                 <div className="title">
                     <h2>Jak to działa?</h2>
-                    <div>Prosty proces w 3 krokach</div>
+                    <p className="description">Prosty proces w 3 krokach</p>
                 </div>
             </FadeIn>
             <div className="steps-tiles-container">

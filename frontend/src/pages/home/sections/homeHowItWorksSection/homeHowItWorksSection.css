@@ -20,12 +20,6 @@
     font-size: clamp(1.6rem, 3.5vw, 3rem);
 }
 
-.home-how-it-works-section .title div
-{
-    color: var(--font-secondary-color);
-    font-size: 1.1em;
-}
-
 .home-how-it-works-section .steps-tiles-container
 {
     display: grid;

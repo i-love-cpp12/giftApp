@@ -14,7 +14,7 @@ export default function HomePricePlansSection(props: HomeSectionProps)
             <FadeIn>
                 <div className="title">
                     <h2>Cennik</h2>
-                    <div>Wybierz pakiet dopasowany do swoich potrzeb</div>
+                    <p className="description">Wybierz pakiet dopasowany do swoich potrzeb</p>
                 </div>
             </FadeIn>
             <div className="price-plans-container">

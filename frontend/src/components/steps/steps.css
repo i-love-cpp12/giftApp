@@ -34,10 +34,16 @@
     font-weight: 700;
     z-index: 1;
 }
+.steps .step-tile svg
+{
+    height: 1.5em;
+    width: 1.5em;
+}
 .steps .step-tile.active
 {
     background-color: var(--accent-color);
     color: var(--fg-color);
+    fill: var(--fg-color);
 }
 .steps .line
 {

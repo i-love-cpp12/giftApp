@@ -13,6 +13,8 @@ export default function Order()
 {
     usePricePlan();
 
+    console.log(window.getComputedStyle(document.body).getPropertyValue("--navbar-height"));
+
     const stepNames = ["Twoje dane", "O osobie", "Osobowość", "Podsumowanie"];
     const stepComponents: ReactElement[] = [
         (<OrderCustomerDataStep

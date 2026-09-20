@@ -38,7 +38,7 @@ export default function HomeTitleSection(props: HomeSectionProps)
 
                 <FadeIn>
                     <div className="order-container">
-                        <Link to="order">
+                        <Link to="/order">
                             <Button variant="primary">
                                 <span>Zamów pomysł na prezent</span>
                                 <ArrowRightIcon />

@@ -8,16 +8,19 @@
 }
 .order-step .title
 {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 .order-step .title h1
 {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-bottom: 0.2em;
 }
 .order-step .description
 {
     line-height: 1.1em;
+    font-size: 0.86em;
 }
 
 .order-step nav
@@ -48,8 +51,9 @@
 
 @media (max-width: 480px)
 {
-    .order-step h1, .order-step .description
+    .order-step .title
     {
+        align-items: center;
         text-align: center;
     }
     

@@ -6,6 +6,8 @@
     flex-direction: column;
     gap: 3em;
     max-width: 1300px;
+    min-height: calc(100dvh - 60px);
+    /* min-height: 100dvh; */
     margin-inline: auto;
 }
 

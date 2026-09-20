@@ -18,6 +18,8 @@
 }
 .button svg
 {
+    height: 1.7em;
+    width: 1.7em;
     transition: all 200ms;
 }
 .button svg path

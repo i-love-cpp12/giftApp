@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { ChangeStepFn } from "./steps/stepTypes";
 import Button from "../../../components/button/Button";
 import FadeIn from "../../../components/fadeIn/FadeIn";
 import ArrowForwardIcon from "../../../assets/icons/arrow_forward.svg?react";
@@ -7,7 +8,6 @@ import PresentIcon from "../../../assets/icons/logo.svg?react";
 import "./orderStep.css";
 
 type OrderStepPhase = "start" | "normal" | "end";
-type ChangeStepFn = () => void;  
 
 interface OrderStepProps
 {
@@ -32,12 +32,14 @@ export default function OrderStep({
 {
     return (
         <section className={`order-step tile ${className}`}>
-            <FadeIn>
                 <div className="title">
-                    <h1>{title}</h1>
-                    <p className="description">{description}</p>
+                    <FadeIn>
+                        <h1>{title}</h1>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="description">{description}</p>
+                    </FadeIn>
                 </div>
-            </FadeIn>
 
             {children}
 

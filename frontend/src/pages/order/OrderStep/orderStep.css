@@ -6,9 +6,18 @@
     flex-direction: column;
     gap: 1.5em
 }
+.order-step .title
+{
+    width: 100%;
+}
 .order-step .title h1
 {
     font-size: 1.6em;
+    margin-bottom: 0.2em;
+}
+.order-step .description
+{
+    line-height: 1.1em;
 }
 
 .order-step nav
@@ -45,7 +54,7 @@
     }
     
 }
-@media (max-width: 330px)
+@media (max-width: 380px)
 {
     .order-step nav
     {
@@ -60,6 +69,6 @@
     .order-step nav .button
     {
         width: 100%;
-        gap: 0px;
+        gap: 3px;
     }
 }

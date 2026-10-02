@@ -34,11 +34,13 @@
 {
     --accent-color: #B85C38;
     --sublime-color: #EDD9BE;
+    --under-sublime-color: hsl(34, 57%, 90%);
     --bg-primary-color: #FAF7F2;
     --bg-secodnary-color: #F6F1E9;
     --fg-color: #FFFBF6;
     --font-primary-color: #2D2118;
     --font-secondary-color: #695a53;
+    --error-color: #dd1a1a;
     
     --navbar-height: 60px;
     --corner-radius: 12px;
@@ -98,5 +100,10 @@ p.description
     border: 1px solid rgba(0, 0, 0, 0.064);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.022);
 }
-
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 

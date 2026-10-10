@@ -11,15 +11,16 @@ import usePricePlan from "../../hooks/usePricePlan";
 
 export default function Order()
 {
-    usePricePlan();
-
-    console.log(window.getComputedStyle(document.body).getPropertyValue("--navbar-height"));
+    const [plan, setPlan] = usePricePlan();
+    const [step, setStep] = useState<number>(1);
 
     const stepNames = ["Twoje dane", "O osobie", "Osobowość", "Podsumowanie"];
     const stepComponents: ReactElement[] = [
         (<OrderCustomerDataStep
             prevStep = {() => {}}
             nextStep={() => setStep((prev) => prev + 1)}
+            plan={plan}
+            setPlan={setPlan}
         />),
         (<OrderTargetPersonDataStep
             prevStep = {() => {setStep((prev) => prev - 1)}}
@@ -34,8 +35,6 @@ export default function Order()
             nextStep={() => {console.log("data send")}}
         />),
     ];
-
-    const [step, setStep] = useState(1);
 
     return (
         <div className="order">

@@ -1,0 +1,4 @@
+label.checked
+{
+    border: 2px solid var(--accent-color);
+}

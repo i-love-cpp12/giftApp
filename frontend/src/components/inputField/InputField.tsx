@@ -3,15 +3,17 @@ import "./inputField.css";
 
 export interface InputProps
 {
-    label ?: string | null,
-    required: boolean,
+    label ?: string,
+    inputId?: string
+    required ?: boolean,
     errorMessage ?: string,
     className ?: string
     children: ReactNode
 }
 
 export default function InputField({
-    label = null,
+    label = "",
+    inputId = "",
     required = false,
     errorMessage = "",
     className = "",
@@ -20,8 +22,8 @@ export default function InputField({
 {
     return (
         <div className={`input ${errorMessage && "error"} ${className}`}>
-            {label !== null && (
-                <label>
+            {label !== "" && (
+                <label htmlFor={inputId}>
                     {label}
                     {required && (<span className="required">*</span>)}
                 </label>

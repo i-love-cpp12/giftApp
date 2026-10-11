@@ -1,4 +1,5 @@
 import type { ComponentProps, ReactNode } from "react";
+import "./radioButtonOption.css";
 
 interface RadioButtonOptionProps extends Omit<ComponentProps<"input">, "type">
 {

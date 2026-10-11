@@ -48,7 +48,9 @@ export default function RadioButtonGroup({
             required={required}
             className={`radio-button-group ${className}`}
             errorMessage={errorMessage}>
-            {options}
+            <div className="options">
+                {options}
+            </div>
         </InputField>
     )
 }

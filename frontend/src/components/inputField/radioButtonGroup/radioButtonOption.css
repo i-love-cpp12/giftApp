@@ -1,0 +1,5 @@
+.tile-radio-option
+{
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}

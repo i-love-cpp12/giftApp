@@ -1,4 +1,72 @@
-label.checked
+.price-plan-radio-group .options
 {
-    border: 2px solid var(--accent-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.5em, 1fr));
+    gap: 1em;
+    margin-top: 0.2em;
+}
+
+.price-plan-radio-group .options label
+{
+    border: 1px solid gray;
+    border-radius: var(--corner-radius);
+    padding: 1.6em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: start;
+    position: relative;
+    transition: background-color 200ms, border-color 200ms;
+}
+.price-plan-radio-group .options label:hover
+{
+    background-color: rgba(215, 215, 215, 0.201);
+}
+
+.price-plan-radio-group .options label.checked
+{
+    border-color: var(--accent-color);
+    background-color: #b85c3816;
+}
+.price-plan-radio-group .options label.checked input[type="radio"]
+{
+    color: var(--accent-color);
+}
+.price-plan-radio-group .options label .recomended
+{
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    background-color: var(--sublime-color);
+    padding: 0.3em 0.5em;
+    border-radius: 100vh;
+    border: none;
+    font-size: 0.9em;
+}
+.price-plan-radio-group .options label .plan-name
+{
+    font-size: 1.2em;
+    font-weight: 500;
+
+}
+.price-plan-radio-group .price-plan-items
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.price-plan-radio-group .price-plan-items > div
+{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.price-plan-radio-group .options label svg
+{
+    height: 1.5em;
+    width: 1.5em;
+}
+.price-plan-radio-group .options label svg path
+{
+    fill: var(--accent-color);
 }

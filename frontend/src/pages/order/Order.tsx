@@ -8,11 +8,15 @@ import OrderTargetPersonDataStep from "./OrderStep/steps/OrderTargetPersonDataSt
 import OrderTargetPersonPersonoalityStep from "./OrderStep/steps/OrderTargetPersonPersonoalityStep/OrderTargetPersonPersonoalityStep";
 import OrderSummaryStep from "./OrderStep/steps/OrderSummaryStep/OrderSummaryStep";
 import usePricePlan from "../../hooks/usePricePlan";
+import { Navigate } from "react-router-dom";
 
 export default function Order()
 {
     const [plan, setPlan] = usePricePlan();
     const [step, setStep] = useState<number>(1);
+
+    if(plan === "custom")
+        return <Navigate to="/contact" />
 
     const stepNames = ["Twoje dane", "O osobie", "Osobowość", "Podsumowanie"];
     const stepComponents: ReactElement[] = [

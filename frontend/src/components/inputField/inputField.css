@@ -28,6 +28,11 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.022);
     color: var(--font-primary-color);
 }
+.input textarea
+{
+    resize: vertical;
+    min-height: 5em;
+}
 .input.error input[type="text"],
 .input.error input[type="number"],
 .input.error input[type="email"],

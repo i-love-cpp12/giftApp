@@ -1,5 +1,7 @@
 import OrderStep from "../../OrderStep";
 import type { OrderStepProps } from "../stepTypes";
+import FadeIn from "../../../../../components/fadeIn/FadeIn";
+import InputField from "../../../../../components/inputField/InputField";
 import "./orderSummaryStep.css";
 
 
@@ -19,7 +21,13 @@ export default function OrderSummaryStep({
             stepPhase="end"
             className="order-summary-step"
         >
-            <div>dsfsdf sdf sd sdf</div>
+            <FadeIn>
+                <div className="default-width">
+                    <InputField label="Zainteresowania i passje" inputId="additional-info" required={false}>
+                        <textarea id="additional-info" placeholder="np. ma alergię na kurz, daje tej osobie co roku..., chcę osobę zaskoczyć..."></textarea>
+                    </InputField>
+                </div>
+            </FadeIn>
         </OrderStep>
     )
 }

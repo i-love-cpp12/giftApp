@@ -11,6 +11,7 @@ export default function App()
                 <Route path="/" element={<Home />}/>
                 <Route path="/home" element={<Home />}/>
                 <Route path="/order" element={<Order />} />
+                <Route path="/contact" element={<div>tel 512 111 111</div>} />
                 <Route path="/test" element={<div>test</div>} />
             </Routes>
         </BrowserRouter>

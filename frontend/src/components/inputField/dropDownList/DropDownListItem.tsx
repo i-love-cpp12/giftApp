@@ -12,7 +12,7 @@ export default function DropDownListItem({
 }: DropDownListItemProps)
 {
     return (
-        <button className={`drop-down-list-item ${selected ? "selected" : ""}`} onClick={() => onClick()}>
+        <button type="button" className={`drop-down-list-item ${selected ? "selected" : ""}`} onClick={() => onClick()}>
             {value}
         </button>
     )

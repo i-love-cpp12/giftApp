@@ -35,7 +35,7 @@ export default function DropDownList({
             className={`${className}`}
             errorMessage={errorMessage}>
             <div className={`drop-down-list ${extended ? "extended":"folded"}`}>
-                <button className="header input-custom" onClick={() => setExtended(prev => !prev)} tabIndex={0}>
+                <button type="button" className="header input-custom" onClick={() => setExtended(prev => !prev)} tabIndex={0}>
                     {selectedValue || defaultValue}
                     <DropDownArrowIcon />
                 </button>

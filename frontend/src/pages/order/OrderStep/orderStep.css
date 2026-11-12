@@ -50,7 +50,10 @@
 {
     stroke: var(--accent-color);
 }
-
+.order-step form
+{
+    z-index: 10;
+}
 @media (max-width: 480px)
 {
     .order-step .title

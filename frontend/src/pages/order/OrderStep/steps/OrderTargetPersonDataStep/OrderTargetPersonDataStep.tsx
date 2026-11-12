@@ -21,13 +21,15 @@ export default function OrderTargetPersonDataStep({
             stepPhase="normal"
             className="order-target-preson-data-step"
         >
-            <div className="age-and-sex">
-                <FadeIn>
-                    <div className="default-width">
-                        <DropDownList onChange={() => {}} options={["kawa", "bal", "sdfsdf", "dfgdgf"]}/>
-                    </div>
-                </FadeIn>
-            </div>
+            <form>
+                <div className="age-and-sex">
+                    <FadeIn>
+                        <div className="default-width">
+                            <DropDownList onChange={() => {}} options={["kawa", "bal", "sdfsdf", "dfgdgf"]}/>
+                        </div>
+                    </FadeIn>
+                </div>
+            </form>
         </OrderStep>
     )
 }

@@ -1,6 +1,8 @@
 import OrderStep from "../../OrderStep";
 import type { OrderStepProps } from "../stepTypes";
 import "./orderTargetPersonDataStep.css";
+import DropDownList from "../../../../../components/inputField/dropDownList/DropDownList";
+import FadeIn from "../../../../../components/fadeIn/FadeIn";
 
 
 
@@ -19,7 +21,13 @@ export default function OrderTargetPersonDataStep({
             stepPhase="normal"
             className="order-target-preson-data-step"
         >
-            <div>fdsldfj</div>
+            <div className="age-and-sex">
+                <FadeIn>
+                    <div className="default-width">
+                        <DropDownList onChange={() => {}} options={["kawa", "bal", "sdfsdf", "dfgdgf"]}/>
+                    </div>
+                </FadeIn>
+            </div>
         </OrderStep>
     )
 }

@@ -32,14 +32,14 @@ export default function OrderStep({
 {
     return (
         <section className={`order-step tile ${className}`}>
-                <div className="title">
-                    <FadeIn>
-                        <h1>{title}</h1>
-                    </FadeIn>
-                    <FadeIn>
-                        <p className="description">{description}</p>
-                    </FadeIn>
-                </div>
+            <div className="title">
+                <FadeIn>
+                    <h1>{title}</h1>
+                </FadeIn>
+                <FadeIn>
+                    <p className="description">{description}</p>
+                </FadeIn>
+            </div>
 
             {children}
 

@@ -32,7 +32,7 @@ export default function HomeTitleSection(props: HomeSectionProps)
 
                 <FadeIn>
                     <p className="description">
-                        Opisz osobę, która checsz obdarować &mdash; nasz ekspert przygotuje spersonalizowany pomysł dopasowany do jej charakteru, zainteresowań i okazji.
+                        Opisz osobę, która checsz obdarować - nasz ekspert przygotuje spersonalizowany pomysł dopasowany do jej charakteru, zainteresowań i okazji.
                     </p>
                 </FadeIn>
 

@@ -1,12 +1,12 @@
 import OrderNavbar from "../../components/navbar/orderNavbar/OrderNavbar";
 import Steps from "../../components/steps/Steps";
 import FadeIn from "../../components/fadeIn/FadeIn";
-import OrderCustomerDataStep from "./OrderStep/steps/OrderCustomerDataStep/OrderCustomerDataStep";
+import OrderCustomerDataStep from "./OrderStep/steps/orderCustomerDataStep/OrderCustomerDataStep";
 import { useState, type ReactElement } from "react";
 import "./order.css";
-import OrderTargetPersonDataStep from "./OrderStep/steps/OrderTargetPersonDataStep/OrderTargetPersonDataStep";
-import OrderTargetPersonPersonoalityStep from "./OrderStep/steps/OrderTargetPersonPersonoalityStep/OrderTargetPersonPersonoalityStep";
-import OrderSummaryStep from "./OrderStep/steps/OrderSummaryStep/OrderSummaryStep";
+import OrderTargetPersonDataStep from "./OrderStep/steps/orderTargetPersonDataStep/OrderTargetPersonDataStep";
+import OrderTargetPersonPersonoalityStep from "./OrderStep/steps/orderTargetPersonPersonoalityStep/OrderTargetPersonPersonoalityStep";
+import OrderSummaryStep from "./OrderStep/steps/orderSummaryStep/OrderSummaryStep";
 import usePricePlan from "../../hooks/usePricePlan";
 import { Navigate } from "react-router-dom";
 

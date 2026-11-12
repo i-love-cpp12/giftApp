@@ -1,0 +1,47 @@
+.order-summary
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    background-color: #ede2d369;
+}
+.order-summary h4
+{
+    font-size: 1.1em;
+}
+.order-summary .summary
+{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    row-gap: 0.5em;
+    column-gap: 5px;
+}
+.order-summary .summary .item-name
+{
+    color: var(--font-secondary-color);
+}
+
+@media (max-width: 900px) and (min-width: 760px)
+{
+    .order-summary .summary
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 500px)
+{
+    .order-summary .summary
+    {
+        grid-template-columns: 1fr;
+        row-gap: 0.2em;
+        column-gap: 0;
+    }
+    .order-summary .summary .item-value
+    {
+        margin-bottom: 0.5em;
+    }
+    .order-summary .summary .item-value:last-child
+    {
+        margin-bottom: 0;
+    }
+}

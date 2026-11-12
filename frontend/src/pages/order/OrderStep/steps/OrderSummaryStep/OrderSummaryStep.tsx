@@ -3,6 +3,9 @@ import type { OrderStepProps } from "../stepTypes";
 import FadeIn from "../../../../../components/fadeIn/FadeIn";
 import InputField from "../../../../../components/inputField/InputField";
 import "./orderSummaryStep.css";
+import OrderSummary from "../../../../../components/orderSummary/OrderSummary";
+import type { Email } from "../../../../../types/email";
+import type { Budget } from "../../../../../types/budget";
 
 
 
@@ -23,9 +26,22 @@ export default function OrderSummaryStep({
         >
             <FadeIn>
                 <div className="default-width">
-                    <InputField label="Zainteresowania i passje" inputId="additional-info" required={false}>
+                    <InputField label="Dodatkowe wskazówki" inputId="additional-info" required={false}>
                         <textarea id="additional-info" placeholder="np. ma alergię na kurz, daje tej osobie co roku..., chcę osobę zaskoczyć..."></textarea>
                     </InputField>
+                </div>
+            </FadeIn>
+            <FadeIn>
+                <div className="default-width">
+                    <OrderSummary
+                        customerName="Oliwier"
+                        customerEmail={"oliwiermoskala2@gmail.com" as Email}
+                        occasion="Urodziny"
+                        targetPersonAge={16}
+                        targetPersonSex="men"
+                        realtion="brat"
+                        budget={{from: 100, to: 500} as Budget}
+                        pricePlan="premium" />
                 </div>
             </FadeIn>
         </OrderStep>

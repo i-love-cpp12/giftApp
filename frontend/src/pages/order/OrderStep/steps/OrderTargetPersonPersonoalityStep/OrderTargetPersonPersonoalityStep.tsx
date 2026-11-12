@@ -30,7 +30,7 @@ export default function OrderTargetPersonPersonoalityStep({
                 </FadeIn>
                 <FadeIn>
                     <div className="default-width">
-                        <InputField label="Hobby &mdash; aktywności w czasie wolnym" inputId="target-person-hobby">
+                        <InputField label="Hobby - aktywności w czasie wolnym" inputId="target-person-hobby">
                             <textarea id="target-person-hobby" placeholder="np. majsterkowanie, wędkarstwo, fotografia, gry planszowe"></textarea>
                         </InputField>
                     </div>

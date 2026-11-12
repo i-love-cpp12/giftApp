@@ -20,7 +20,7 @@ export default function HomeSummarySection(props: HomeSectionProps)
             </FadeIn>
             <FadeIn>
                 <div className="description">
-                    Daj nam 3 minuty i kilkanaście złotych &mdash; a my zadbamy, żeby twój prezent był naprawde wyjątkowy.
+                    Daj nam 3 minuty i kilkanaście złotych - a my zadbamy, żeby twój prezent był naprawde wyjątkowy.
                 </div>
             </FadeIn>
             <FadeIn>

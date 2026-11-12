@@ -23,7 +23,7 @@ export default function OrderCustomerDataStep({
     return (
         <OrderStep
             title="Zacznijmy od Ciebie"
-            description="Podaj dane kontaktowe &mdash; wyślemy ci na nie spersonalizowaną propozycję."
+            description="Podaj dane kontaktowe - wyślemy ci na nie spersonalizowaną propozycję."
             prevStep={prevStep}
             nextStep={nextStep}
             stepPhase="start"

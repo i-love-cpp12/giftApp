@@ -24,7 +24,7 @@ export default function HomeHowItWorksSection(props: HomeSectionProps)
                         </div>
                         <h3>Opisz osobę</h3>
                         <p className="description">
-                            Wypełnij formularz &mdash; wiek, zainteresowania, charakterm okazja i budżet, Im więcej szczegółów, tym trafniejszy pomysł.
+                            Wypełnij formularz - wiek, zainteresowania, charakterm okazja i budżet, Im więcej szczegółów, tym trafniejszy pomysł.
                         </p>
                         <div className="note">~ 3 minuty</div>
                     </div>
@@ -48,7 +48,7 @@ export default function HomeHowItWorksSection(props: HomeSectionProps)
                         </div>
                         <h3>Zaskocz bliską osobę</h3>
                         <p className="description">
-                            Kup prezent samodzielnie lub zleć nam całą realizację &mdash; zakup, personalizację, pakowanie i wysyłkę.
+                            Kup prezent samodzielnie lub zleć nam całą realizację - zakup, personalizację, pakowanie i wysyłkę.
                         </p>
                         <div className="note">Twój wybór</div>
                     </div>

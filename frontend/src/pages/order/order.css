@@ -1,3 +1,10 @@
+body
+{
+    height: auto;
+    min-height: 100dvh;
+    background-color: var(--bg-primary-color);
+}
+
 .order main
 {
     font-size: clamp(0.75rem, 2.3vw, 1rem);
@@ -7,7 +14,6 @@
     gap: 3em;
     max-width: 1300px;
     min-height: calc(100dvh - 60px);
-    /* min-height: 100dvh; */
     margin-inline: auto;
 }
 

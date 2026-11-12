@@ -1,6 +1,11 @@
 .drop-down-list
 {
     position: relative;
+    z-index: 20;
+}
+.drop-down-list.extended
+{
+    z-index: 80;
 }
 
 .drop-down-list .header
@@ -15,10 +20,13 @@
 {
     fill: var(--font-primary-color);
     transition: transform 100ms ease;
+    height: 1em;
+    width: 1em;
+    transform: scale(1.5);
 }
 .drop-down-list.extended .header svg
 {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scale(1.5);
 }
 .drop-down-list .options
 {
@@ -30,7 +38,13 @@
     border: none;
     border-radius: 0;
     background-color: transparent;
+    z-index: 100;
 }
+.drop-down-list.extended .options
+{
+    z-index: 120;
+}
+
 .drop-down-list .options button.drop-down-list-item
 {
     border: none;

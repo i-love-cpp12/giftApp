@@ -5,6 +5,7 @@
     transition: transform 600ms, opacity 600ms;
     width: fit-content;
     height: fit-content;
+    z-index: 5;
 }
 .fade-in.visible
 {
@@ -14,4 +15,16 @@
 .fade-in.default-width
 {
     width: unset;
+}
+.fade-in.z-index-low
+{
+    z-index: 20;
+}
+.fade-in.z-index-mid
+{
+    z-index: 50;
+}
+.fade-in.z-index-high
+{
+    z-index: 100;
 }

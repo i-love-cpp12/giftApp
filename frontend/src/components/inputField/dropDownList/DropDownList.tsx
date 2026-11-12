@@ -12,6 +12,7 @@ interface DropDownListProps
     required ?: boolean,
     errorMessage ?: string,
     label ?: string,
+    inputId ?: string
     className ?: string
 }
 
@@ -22,6 +23,7 @@ export default function DropDownList({
     required = false,
     errorMessage = "",
     label = "",
+    inputId = "",
     className = "",
 }: DropDownListProps)
 {
@@ -31,11 +33,12 @@ export default function DropDownList({
     return (
         <InputField
             label={label}
+            inputId={inputId}
             required={required}
             className={`${className}`}
             errorMessage={errorMessage}>
             <div className={`drop-down-list ${extended ? "extended":"folded"}`}>
-                <button type="button" className="header input-custom" onClick={() => setExtended(prev => !prev)} tabIndex={0}>
+                <button id={inputId} type="button" className="header input-custom" onClick={() => setExtended(prev => !prev)} tabIndex={0}>
                     {selectedValue || defaultValue}
                     <DropDownArrowIcon />
                 </button>

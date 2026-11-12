@@ -1,4 +1,4 @@
-import getPricePlanCost from "../../config/pricePlanCost"
+import getPricePlanDetails from "../../config/pricePlanDetails"
 import { budgetToHumanString, type Budget } from "../../types/budget"
 import type { Email } from "../../types/email"
 import type { Plan } from "../../types/pricePlan"
@@ -65,7 +65,7 @@ export default function OrderSummary({
                     Pakiet:
                 </div>
                 <div className="item-value">
-                    {capilalizeFirstLetter(pricePlan as string)} - {getPricePlanCost(pricePlan) + " zl" || "Wycena indywidualna"}
+                    {capilalizeFirstLetter(pricePlan as string)} - {getPricePlanDetails(pricePlan).cost + " zl" || "Wycena indywidualna"}
                 </div>
             </div>
         </div>

@@ -1,19 +1,19 @@
 interface DropDownListItemProps
 {
-    value: string,
+    label: string,
     onClick: () => void,
     selected: boolean,
 }
 
 export default function DropDownListItem({
-    value,
+    label,
     onClick,
     selected = false,
 }: DropDownListItemProps)
 {
     return (
         <button type="button" className={`drop-down-list-item ${selected ? "selected" : ""}`} onClick={() => onClick()}>
-            {value}
+            {label}
         </button>
     )
 }

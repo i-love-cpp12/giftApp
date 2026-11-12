@@ -1,17 +1,27 @@
+import { isValidPrice, priceToHumanString, type Price } from "./price";
+
 export type Budget = {
-    from: number,
-    to: number
+    from: Price | null,
+    to: Price | null
 };
 
-export function isValidBudget(budget: {from: number, to: number}): budget is Budget
+export function isValidBudget(budget: {from: number | null, to: number | null}): budget is Budget
 {
-    return !isNaN(budget.from) && !isNaN(budget.to) && budget.from <= budget.to && (Number.isFinite(budget.from) || Number.isFinite(budget.to));
+    if(budget.from !== null && budget.to !== null && budget.from > budget.to)
+        return false;
+
+    return (
+        (budget.from === null || isValidPrice(budget.from)) &&
+        (budget.to === null || isValidPrice(budget.to))
+    );
 }
 export function budgetToHumanString(budget: Budget): string
 {
-    if(!Number.isFinite(budget.from))
-        return `Do ${budget.to} zł`;
-    if(!Number.isFinite(budget.to))
-        return `Powyżej ${budget.from} zł`;
-    return `Od ${budget.from} do ${budget.to}`;
+    if(budget.from === null && budget.to === null)
+        return "Nie ograniczony";
+    if(budget.from === null)
+        return `Do ${priceToHumanString(budget.to)}`;
+    if(budget.to === null)
+        return `Powyżej ${priceToHumanString(budget.from)}`;
+    return `Od ${priceToHumanString(budget.from)} do ${priceToHumanString(budget.to)}`;
 }

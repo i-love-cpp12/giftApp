@@ -5,6 +5,7 @@ import FadeIn from "../../../../../components/fadeIn/FadeIn";
 
 import "./orderTargetPersonDataStep.css";
 import InputField from "../../../../../components/inputField/InputField";
+import type { Sex } from "../../../../../types/sex";
 
 
 export default function OrderTargetPersonDataStep({
@@ -35,7 +36,10 @@ export default function OrderTargetPersonDataStep({
                         <div className="default-width z-index-high">
                             <DropDownList
                                 onChange={() => {}}
-                                options={["Męższczyzna", "Kobieta"]}
+                                options={[
+                                    {label: "Męższczyzna", value: ("men" as Sex)},
+                                    {label: "Kobieta", value: ("women" as Sex)}
+                                ]}
                                 label="Płeć"
                                 inputId="sex"
                                 required={true}
@@ -48,24 +52,24 @@ export default function OrderTargetPersonDataStep({
                         <DropDownList
                             onChange={() => {}}
                             options={[
-                                "Urodziny",
-                                "Imieniny",
-                                "Walentynki",
-                                "Boże Narodzenie",
-                                "Wielkanoc",
-                                "Dzień Matki",
-                                "Dzień Ojca",
-                                "Dzień Babci",
-                                "Dzień Dziadka",
-                                "Dzień Dziecka",
-                                "Rocznica",
-                                "Ślub",
-                                "Narodziny dziecka",
-                                "Awans lub sukces",
-                                "Podziękowanie",
-                                "Przeprosiny",
-                                "Bez okazji",
-                                "Inna okazja"
+                                {label: "Urodziny", value: "birthday"},
+                                {label: "Imieniny", value: "name_day"},
+                                {label: "Walentynki", value: "valentines_day"},
+                                {label: "Boże Narodzenie", value: "christmas"},
+                                {label: "Wielkanoc", value: "easter"},
+                                {label: "Dzień Matki", value: "mothers_day"},
+                                {label: "Dzień Ojca", value: "fathers_day"},
+                                {label: "Dzień Babci", value: "grandmothers_day"},
+                                {label: "Dzień Dziadka", value: "grandfathers_day"},
+                                {label: "Dzień Dziecka", value: "childrens_day"},
+                                {label: "Rocznica", value: "anniversary"},
+                                {label: "Ślub", value: "wedding"},
+                                {label: "Narodziny dziecka", value: "birth_of_child"},
+                                {label: "Awans lub sukces", value: "promotion_or_success"},
+                                {label: "Podziękowanie", value: "thank_you"},
+                                {label: "Przeprosiny", value: "apology"},
+                                {label: "Bez okazji", value: "just_because"},
+                                {label: "Inna okazja", value: "other"}
                             ]}
                             label="Okazja"
                             inputId="occasion"
@@ -84,16 +88,18 @@ export default function OrderTargetPersonDataStep({
                     <div className="default-width">
                         <DropDownList
                             onChange={() => {}}
-                            options={["Do 50 zł",
-                                    "50-100 zł",
-                                    "100-150 zł",
-                                    "150-200 zł",
-                                    "200-300 zł",
-                                    "300-500 zł",
-                                    "500-750 zł",
-                                    "750-1000 zł",
-                                    "1000+ zł",
-                                    "Bez limitu"]}
+                            options={[
+                                {label: "Do 50 zł", value: JSON.stringify({ from: 0, to: 50 })},
+                                {label: "50-100 zł", value: JSON.stringify({ from: 50, to: 100 })},
+                                {label: "100-150 zł", value: JSON.stringify({ from: 100, to: 150 })},
+                                {label: "150-200 zł", value: JSON.stringify({ from: 150, to: 200 })},
+                                {label: "200-300 zł", value: JSON.stringify({ from: 200, to: 300 })},
+                                {label: "300-500 zł", value: JSON.stringify({ from: 300, to: 500 })},
+                                {label: "500-750 zł", value: JSON.stringify({ from: 500, to: 750 })},
+                                {label: "750-1000 zł", value: JSON.stringify({ from: 750, to: 1000 })},
+                                {label: "1000+ zł", value: JSON.stringify({ from: 1000, to: null })},
+                                {label: "Bez limitu", value: JSON.stringify({ from: null, to: null })}
+                            ]}
                             label="Budżet na prezent"
                             inputId="budget"
                             required={true}

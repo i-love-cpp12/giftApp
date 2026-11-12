@@ -4,11 +4,16 @@ import DropDownArrowIcon from "../../../assets/icons/arrow_drop_down.svg?react";
 import { useState } from "react";
 import "./dropDownList.css"
 
+export type Option = {
+    label: string,
+    value: string
+};
+
 interface DropDownListProps
 {
     onChange: (value: string) => void,
-    options: string[],
-    defaultValue ?: string,
+    options: Option[],
+    defaultOption ?: string,
     required ?: boolean,
     errorMessage ?: string,
     label ?: string,
@@ -19,7 +24,7 @@ interface DropDownListProps
 export default function DropDownList({
     onChange,
     options,
-    defaultValue = "Wybierz...",
+    defaultOption = "Wybierz...",
     required = false,
     errorMessage = "",
     label = "",
@@ -27,7 +32,10 @@ export default function DropDownList({
     className = "",
 }: DropDownListProps)
 {
-    const [selectedValue, setSelectedValue] = useState<string | null>(options.includes(defaultValue) ? defaultValue : null);
+    const defaultOptionIndex = options.findIndex(option => option.label === defaultOption);
+    const [selectedOption, setSelectedOption] = useState<Option | null>(
+        defaultOptionIndex !== -1 ? options[defaultOptionIndex] : null
+    );
     const [extended, setExtended] = useState<boolean>(false);
 
     return (
@@ -39,18 +47,18 @@ export default function DropDownList({
             errorMessage={errorMessage}>
             <div className={`drop-down-list ${extended ? "extended":"folded"}`}>
                 <button id={inputId} type="button" className="header input-custom" onClick={() => setExtended(prev => !prev)} tabIndex={0}>
-                    {selectedValue || defaultValue}
+                    {selectedOption?.label || defaultOption}
                     <DropDownArrowIcon />
                 </button>
                 <div className="tile options input-custom">
-                    {options.map((optionValue, i) => (
+                    {options.map((option, i) => (
                         <DropDownListItem
                             key={i}
-                            value={optionValue}
-                            selected={optionValue === selectedValue}
+                            label={option.label}
+                            selected={option.label === selectedOption?.label}
                             onClick={() => {
-                                setSelectedValue(optionValue);
-                                onChange(optionValue);
+                                setSelectedOption(option);
+                                onChange(option.value);
                                 setExtended(false);
                             }}
                         />

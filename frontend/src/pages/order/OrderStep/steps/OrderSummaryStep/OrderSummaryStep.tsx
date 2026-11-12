@@ -2,11 +2,14 @@ import OrderStep from "../../OrderStep";
 import type { OrderStepProps } from "../stepTypes";
 import FadeIn from "../../../../../components/fadeIn/FadeIn";
 import InputField from "../../../../../components/inputField/InputField";
-import "./orderSummaryStep.css";
 import OrderSummary from "../../../../../components/orderSummary/OrderSummary";
 import type { Email } from "../../../../../types/email";
 import type { Budget } from "../../../../../types/budget";
+import SparklesIcon from "../../../../../assets/icons/sparkles.svg?react";
 
+import "./orderSummaryStep.css";
+import getPricePlanDetails from "../../../../../config/pricePlanDetails";
+import usePricePlan from "../../../../../hooks/usePricePlan";
 
 
 export default function OrderSummaryStep({
@@ -14,6 +17,7 @@ export default function OrderSummaryStep({
     nextStep,
 }: OrderStepProps)
 {
+    const [plan] = usePricePlan();
 
     return (
         <OrderStep
@@ -41,7 +45,15 @@ export default function OrderSummaryStep({
                         targetPersonSex="men"
                         realtion="brat"
                         budget={{from: 100, to: 500} as Budget}
-                        pricePlan="premium" />
+                        pricePlan={plan} />
+                </div>
+            </FadeIn>
+            <FadeIn>
+                <div className="note default-width tile">
+                    <SparklesIcon />
+                    <p className="description">
+                        Po wysłaniu formularza otrzymasz e-main z linkiem do płatności. Propozycję prezentu wyślemy w ciągu <span>{getPricePlanDetails(plan).maxWaitHours}godzin</span> od zaksięgowania wpłaty.
+                    </p>
                 </div>
             </FadeIn>
         </OrderStep>

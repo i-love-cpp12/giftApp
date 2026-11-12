@@ -1,0 +1,26 @@
+.order-summary-step .note
+{
+    padding: 1.5em;
+    display: flex;
+    gap: 0.6em;
+    font-size: 1.07em;
+    background-color: #ede2d369;
+}
+
+.order-summary-step .note svg
+{
+    fill: var(--accent-color);
+    height: 1.6em;
+    width: 1.6em;
+}
+
+.order-summary-step .note .description
+{
+    line-height: 1.5em;
+}
+
+.order-summary-step .note .description span
+{
+    color: var(--font-primary-color);
+    font-weight: 900;
+}

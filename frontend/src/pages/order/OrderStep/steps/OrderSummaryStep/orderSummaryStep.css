@@ -1,22 +1,24 @@
 .order-summary-step .note
 {
-    padding: 1.5em;
+    padding: 1.3em;
     display: flex;
     gap: 0.6em;
-    font-size: 1.07em;
+    font-size: 0.8em;
     background-color: #ede2d369;
 }
 
 .order-summary-step .note svg
 {
     fill: var(--accent-color);
-    height: 1.6em;
-    width: 1.6em;
+    height: 1.4em;
+    width: 1.4em;
+    flex-shrink: 0;
 }
 
 .order-summary-step .note .description
 {
     line-height: 1.5em;
+    text-wrap: wrap;
 }
 
 .order-summary-step .note .description span

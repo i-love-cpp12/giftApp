@@ -7,5 +7,5 @@ export function isValidPrice(price: number): price is Price
 
 export function priceToHumanString(price: Price): string
 {
-    return `${price} zł`;
+    return `${price.toFixed(2)} zł`;
 }

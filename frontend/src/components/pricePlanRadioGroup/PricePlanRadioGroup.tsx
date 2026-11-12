@@ -3,12 +3,13 @@ import RadioButtonOption from "../inputField/radioButtonGroup/RadioButtonOption"
 import CheckIcon from "../../assets/icons/check.svg?react";
 
 import "./pricePlanRadioGroup.css";
+import { priceToHumanString, type Price } from "../../types/price";
 
 type Plan = {
     value: string,
     name: string,
     isRecomended: boolean,
-    price: number,
+    price: Price,
     planItems: string[]
 };
 
@@ -36,7 +37,7 @@ export default function PricePlanRadioGroup({
                 <RadioButtonOption key={i} value={plan.value}>
                     {plan.isRecomended && (<div className="recomended">Polecany</div>)}
                     <div className="plan-name">{plan.name}</div>
-                    <h2 style={{color: "var(--accent-color)"}}>{plan.price.toFixed(2)} zł</h2>
+                    <h2 style={{color: "var(--accent-color)"}}>{priceToHumanString(plan.price)}</h2>
                     <div className="price-plan-items">
                         {plan.planItems.map((item, j) => (
                             <div key={j}>

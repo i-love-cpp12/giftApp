@@ -4,6 +4,8 @@
     flex-direction: column;
     gap: 0.8em;
     background-color: #ede2d369;
+    font-size: 0.85em;
+    padding: 1.2em;
 }
 .order-summary h4
 {
@@ -13,7 +15,7 @@
 {
     display: grid;
     grid-template-columns: 2fr 5fr;
-    row-gap: 0.5em;
+    row-gap: 0.7em;
     column-gap: 5px;
 }
 .order-summary .summary .item-name
@@ -21,7 +23,7 @@
     color: var(--font-secondary-color);
 }
 
-@media (max-width: 900px) and (min-width: 760px)
+@media (max-width: 900px) and (min-width: 501px)
 {
     .order-summary .summary
     {

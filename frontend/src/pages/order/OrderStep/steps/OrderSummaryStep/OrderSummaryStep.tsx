@@ -6,11 +6,10 @@ import OrderSummary from "../../../../../components/orderSummary/OrderSummary";
 import type { Email } from "../../../../../types/email";
 import type { Budget } from "../../../../../types/budget";
 import SparklesIcon from "../../../../../assets/icons/sparkles.svg?react";
-
-import "./orderSummaryStep.css";
 import getPricePlanDetails from "../../../../../config/pricePlanDetails";
 import usePricePlan from "../../../../../hooks/usePricePlan";
 
+import "./orderSummaryStep.css";
 
 export default function OrderSummaryStep({
     prevStep,
@@ -52,7 +51,7 @@ export default function OrderSummaryStep({
                 <div className="note default-width tile">
                     <SparklesIcon />
                     <p className="description">
-                        Po wysłaniu formularza otrzymasz e-main z linkiem do płatności. Propozycję prezentu wyślemy w ciągu <span>{getPricePlanDetails(plan).maxWaitHours}godzin</span> od zaksięgowania wpłaty.
+                        Po wysłaniu formularza otrzymasz e-mail z linkiem do płatności. Propozycję prezentu wyślemy w ciągu <span>{getPricePlanDetails(plan).maxWaitHours} godzin</span> od zaksięgowania wpłaty.
                     </p>
                 </div>
             </FadeIn>

@@ -8,6 +8,7 @@
     flex-direction: column;
     gap: 0.4em;
     /* width: 100%; */
+    font-size: 0.95em;
 }
 .input label
 {
@@ -36,7 +37,7 @@
 .input textarea
 {
     resize: vertical;
-    min-height: 5em;
+    min-height: 5.2em;
 }
 input[type="number"] {
   -webkit-appearance: textfield;
